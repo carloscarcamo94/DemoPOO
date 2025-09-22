@@ -1,0 +1,40 @@
+package demoPOO;
+
+import demoPOO.models.Conexion;
+import demoPOO.models.ConexionInternet;
+import demoPOO.models.EstadoTelefono;
+import demoPOO.models.Telefono;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+		// Trabajando con objetos
+		Telefono telefono = new Telefono();
+		
+		telefono.setMarca("Samsung");
+		telefono.setModelo("Galaxy");
+		telefono.setSerie("12345");
+		telefono.setNumero("70607060");
+		telefono.marcar("70607060");
+		
+		Conexion conn = new Conexion("0101", "Claro", "8.8.8.8");
+		conn.setTelefono(telefono);
+		conn.establecerConexion();
+		
+		ConexionInternet conexionInternet = new ConexionInternet("Claro", true, true); 
+        conexionInternet.setTelefono(telefono);
+        conexionInternet.establecerConexionInternet();
+        
+     // Crear estado del teléfono (ejemplo con valores simulados)
+        EstadoTelefono estado = new EstadoTelefono(telefono, 80, 45, 60);
+        estado.mostrarInforme();
+
+		
+		System.out.println("--- Datos del teléfono ---");
+		System.out.println("Marca del teléfono: " + telefono.getMarca());
+		System.out.println("Modelo del teléfono: " + telefono.getModelo());
+		System.out.println("Serie del teléfono: " + telefono.getSerie());
+
+	}
+
+}
