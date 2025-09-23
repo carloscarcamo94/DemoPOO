@@ -63,7 +63,7 @@ public class EstadoTelefono {
 
     // Informe completo
     public void mostrarInforme() {
-        System.out.println("📱 Informe de estado del teléfono " + telefono.getMarca() + " " + telefono.getModelo());
+        System.out.println("\n 📱 Informe de estado del teléfono " + telefono.getMarca() + " " + telefono.getModelo());
         verificarBateria();
         verificarCPU();
         verificarMemoria();
