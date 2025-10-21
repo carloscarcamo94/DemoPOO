@@ -1,10 +1,12 @@
 package demoPOO;
 
+import demoPOO.models.Componente;
 import demoPOO.models.Conexion;
 import demoPOO.models.ConexionInternet;
 import demoPOO.models.EstadoTelefono;
 import demoPOO.models.HistorialLlamadas;
 import demoPOO.models.Telefono;
+import demoPOO.services.ConexionImpl;
 
 public class Main2 {
 
@@ -48,6 +50,13 @@ public class Main2 {
 		System.out.println("Modelo del teléfono: " + telefono.getModelo());
 		System.out.println("Serie del teléfono: " + telefono.getSerie());
 
+		ConexionImpl conexionImpl = new ConexionImpl();
+		conexionImpl.verificarBateria(50);
+		conexionImpl.verificacionElectronica();
+		conexionImpl.verificacionElectronica(null, null);
+		
+		// Usando el objeto componente
+		Componente componente = new Componente();
 	}
 
 }

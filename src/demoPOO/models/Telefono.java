@@ -1,6 +1,8 @@
 package demoPOO.models;
 
-public class Telefono {
+import demoPOO.services.TelefonoImpl;
+
+public class Telefono extends TelefonoImpl{
 	
 	//Propiedades - Atributos
 	private String marca;
